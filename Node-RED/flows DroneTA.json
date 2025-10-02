@@ -1,0 +1,112 @@
+[
+    {
+        "id": "abaa355180fcbec5",
+        "type": "ui-template",
+        "z": "cd888f3f4789748d",
+        "group": "b429518aee48a6fb",
+        "page": "",
+        "ui": "",
+        "name": "Leaf Disease Map",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "head": "",
+        "format": "<template>\n  <div>\n    <h4>Leaf Disease Map:</h4>\n\n    <div class=\"image-container\">\n      <div class=\"image-wrapper\" ref=\"wrapper\">\n        <img\n          :src=\"imageUrl\"\n          :style=\"{ transform: 'scale(' + zoom + ')' }\"\n        />\n      </div>\n\n      <div class=\"zoom-controls\">\n        <button @click=\"zoomOut\">-</button>\n        <button @click=\"zoomIn\">+</button>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\n  export default {\n  data() {\n    return {\n      imageUrl: \"https://raw.githubusercontent.com/fazlirais/DroneTA/main/images/merged_output.jpg\",\n      zoom: 1\n    };\n  },\n  methods: {\n    zoomIn() {\n      this.zoom += 0.1;\n    },\n    zoomOut() {\n      if (this.zoom > 0.1) this.zoom -= 0.1;\n    }\n  }\n};\n</script>\n\n<style scoped>\n  .image-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n  }\n\n  .image-wrapper {\n    overflow: auto;\n    border: 1px solid #ddd;\n    height: 480px;\n    width: 100%;\n  }\n\n  .image-wrapper img {\n    display: block;\n    transform-origin: top left;\n  }\n\n  .zoom-controls {\n    margin-top: 10px;\n    display: flex;\n    gap: 5px;\n  }\n\n  .zoom-controls button {\n    padding: 5px 10px;\n    cursor: pointer;\n  }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 610,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b429518aee48a6fb",
+        "type": "ui-group",
+        "name": "DroneTA",
+        "page": "d0621b8f20aee671",
+        "width": "6",
+        "height": "1",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": true,
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "d0621b8f20aee671",
+        "type": "ui-page",
+        "name": "Charts",
+        "ui": "1805777f90e92057",
+        "path": "/charts",
+        "icon": "home",
+        "layout": "notebook",
+        "theme": "5075a7d8e4947586",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "1805777f90e92057",
+        "type": "ui-base",
+        "name": "dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "titleBarStyle": "default",
+        "showReconnectNotification": false,
+        "notificationDisplayTime": "5",
+        "showDisconnectNotification": false
+    },
+    {
+        "id": "5075a7d8e4947586",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    }
+]
