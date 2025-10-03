@@ -22,14 +22,24 @@ To execute this leaf disease detection project, you will need the following comp
 For this project, the following hardware configuration was used:
 - **Flight Controller**: Pixhawk 2.4.8  
 - **Companion Computer**: Raspberry Pi 4B  
-- **Camera**: Raspberry Pi Camera Module 
-![Drone Hardware Overview](drone_hardware_overview.png)
+- **Camera**: Raspberry Pi Camera Module
+
+With this setup, the drone used in the project is as follows:  
+
+**Figure 1. Drone Hardware Overview**  
+![Drone Hardware Overview](drone_hardware_overview.png)  
+
+**Figure 2. Drone Wiring Diagram**  
+![Drone Wiring Diagram](drone_wiring_diagram.png)
 
 ## 📡 Leaf Disease Geolocation
-The drone detects diseased plants, calculates their position, and logs them in the global coordinate system.
+To determine the real-world location of diseased plants, an algorithm is applied to convert the pixel position of the detected disease in the image into its actual geographic position.  
+This process leverages several parameters, including the drone’s GPS location, altitude, field of view (FOV), and camera specifications.  
 
-![Object_Distance Diagram](disease_geolocation.png)  
+**Figure 3. Disease Geolocation Algorithm**  
+![Disease Geolocation Diagram](disease_geolocation.png)
 
+---
 ## 📂 Repository Structure
 
 ### 1. **LocalEnv/**
@@ -77,4 +87,4 @@ Contains the Node-RED flow for the **dashboard visualization**.
 
 1. Install dependencies (on local machine):
    ```bash
-   pip install ultralytics pygame opencv-python matplotlib
+   pip install -r requirements.txt
