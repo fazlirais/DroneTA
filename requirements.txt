@@ -1,0 +1,11 @@
+ultralytics
+opencv-python
+pygame
+numpy
+pyproj
+paho-mqtt
+dronekit
+pymavlink
+matplotlib
+seaborn
+Pillow
