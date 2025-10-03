@@ -4,6 +4,24 @@ This project integrates **drone autonomous path mapping**, **image-based disease
 It consists of multiple environments for local simulation, drone execution, and dashboard visualization.  
 
 ---
+## 🛠️ Hardware Setup
+The drone consists of the following components:
+
+- Pixhawk 2.4.8 flight controller with GPS module  
+- Raspberry Pi 4B for onboard processing  
+- RPi Camera for disease detection  
+- 1000 kV Brushless Motors with 10-inch propellers  
+- ESC 30A and power distribution  
+- LiPo Battery (3S 5200 mAh)  
+- 6-channel receiver and safety switch  
+- Gimbal camera mount and landing skid  
+
+![Drone Hardware Overview](drone_hardware_overview.png)
+
+## 📡 System Overview
+The drone detects diseased plants, calculates their position, and logs them in the global coordinate system.
+
+![Object_Distance Diagram](disease_geolocation.png)  
 
 ## 📂 Repository Structure
 
