@@ -4,18 +4,25 @@ This project integrates **drone autonomous path mapping**, **image-based disease
 It consists of multiple environments for local simulation, drone execution, and dashboard visualization.  
 
 ---
-## 🛠️ Hardware Setup
-The drone consists of the following components:
+## 🛠️ Requirements
 
-- Pixhawk 2.4.8 flight controller with GPS module  
-- Raspberry Pi 4B for onboard processing  
-- RPi Camera for disease detection  
-- 1000 kV Brushless Motors with 10-inch propellers  
-- ESC 30A and power distribution  
-- LiPo Battery (3S 5200 mAh)  
-- 6-channel receiver and safety switch  
-- Gimbal camera mount and landing skid  
+To execute this leaf disease detection project, you will need the following components:
 
+### Hardware
+- **Drone with ArduPilot-based flight controller** (e.g., Pixhawk, Cube, etc.)
+- **Companion computer** (e.g., Raspberry Pi, Jetson Nano, or similar SBC)
+- **Camera** that can be connected to the companion computer (USB or CSI camera)
+
+### Software
+- **Mission Planner** (used to simulate the drone flight before executing it in real flight)
+- **Python 3.8+** (recommended version for compatibility with DroneKit and YOLOv8)
+- **requirements.txt** (contains all necessary Python dependencies; install with `pip install -r requirements.txt`)
+
+### Hardware Used in This Project
+For this project, the following hardware configuration was used:
+- **Flight Controller**: Pixhawk 2.4.8  
+- **Companion Computer**: Raspberry Pi 4B  
+- **Camera**: Raspberry Pi Camera Module 
 ![Drone Hardware Overview](drone_hardware_overview.png)
 
 ## 📡 Leaf Disease Geolocation
