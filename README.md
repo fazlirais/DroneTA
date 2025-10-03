@@ -1,4 +1,4 @@
-# 🚁 DroneTA – Automatic Leaf Disease Detection using Drone & Node-RED
+# DroneTA – Automatic Leaf Disease Detection using Drone & Node-RED
 
 This project integrates **drone autonomous path mapping**, **image-based disease detection (YOLOv8)**, and a **Node-RED dashboard** for real-time monitoring of cassava leaf diseases.  
 It consists of multiple environments for local simulation, drone execution, and dashboard visualization.  
@@ -18,7 +18,7 @@ The drone consists of the following components:
 
 ![Drone Hardware Overview](drone_hardware_overview.png)
 
-## 📡 System Overview
+## 📡 Leaf Disease Geolocation
 The drone detects diseased plants, calculates their position, and logs them in the global coordinate system.
 
 ![Object_Distance Diagram](disease_geolocation.png)  
@@ -51,7 +51,7 @@ Responsible for executing flight commands, capturing plant images, running YOLO 
 Contains **plots and detection results** uploaded by the drone and later displayed on the Node-RED dashboard:
 
 - `Drone Path Map.jpg` → Map of the drone’s flown path.  
-- `merged_output.jpg` → Combined disease detection result with bounding boxes over the farm area.  
+- `merged_output.jpg` → Map of the combined disease detection result.  
 - `scatter_Chlorosis.png`, `scatter_Gulma.png`, `scatter_Leaf Spot.png`, `scatter_Necrosis.png`, `scatter_Pest.png` → Scatter plots of detected diseases.  
 - `scatter_all.png` → Combined scatter plot of all detected diseases.  
 
