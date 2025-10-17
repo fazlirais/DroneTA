@@ -80,11 +80,3 @@ Contains the Node-RED flow for the **dashboard visualization**.
 - **flows_DroneTA.json** → Node-RED flow export file to be imported into Node-RED to set up the dashboard.  
 
 ---
-
-## ▶️ Usage Instructions
-
-### 1. Local Environment (Simulation & Mapping)
-
-1. Install dependencies (on local machine):
-   ```bash
-   pip install -r requirements.txt
